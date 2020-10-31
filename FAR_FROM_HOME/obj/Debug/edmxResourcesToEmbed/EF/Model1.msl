@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="DATABASE_FFHModelStoreContainer" CdmEntityContainer="DATABASE_FFHEntities">
+    <EntitySetMapping Name="PUBLICACIONDT">
+      <EntityTypeMapping TypeName="DATABASE_FFHModel.PUBLICACIONDT">
+        <MappingFragment StoreEntitySet="PUBLICACIONDT">
+          <ScalarProperty Name="ID_PUBLICACION" ColumnName="ID_PUBLICACION" />
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="ID_UBICACION" ColumnName="ID_UBICACION" />
+          <ScalarProperty Name="ID_RAZA" ColumnName="ID_RAZA" />
+          <ScalarProperty Name="ESTADO_SALUD" ColumnName="ESTADO_SALUD" />
+          <ScalarProperty Name="TIPO_MASCOTA" ColumnName="TIPO_MASCOTA" />
+          <ScalarProperty Name="COLOR_MASCOTA" ColumnName="COLOR_MASCOTA" />
+          <ScalarProperty Name="TAMAÑO" ColumnName="TAMAÑO" />
+          <ScalarProperty Name="EDAD" ColumnName="EDAD" />
+          <ScalarProperty Name="REDES" ColumnName="REDES" />
+          <ScalarProperty Name="SEXO" ColumnName="SEXO" />
+          <ScalarProperty Name="TRANSITO" ColumnName="TRANSITO" />
+          <ScalarProperty Name="EST_ENCPERD" ColumnName="EST_ENCPERD" />
+          <ScalarProperty Name="F_PUBLICACION" ColumnName="F_PUBLICACION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RAZADT">
+      <EntityTypeMapping TypeName="DATABASE_FFHModel.RAZADT">
+        <MappingFragment StoreEntitySet="RAZADT">
+          <ScalarProperty Name="ID_RAZA" ColumnName="ID_RAZA" />
+          <ScalarProperty Name="D_RAZA" ColumnName="D_RAZA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UBICACIONDT">
+      <EntityTypeMapping TypeName="DATABASE_FFHModel.UBICACIONDT">
+        <MappingFragment StoreEntitySet="UBICACIONDT">
+          <ScalarProperty Name="ID_UBICACION" ColumnName="ID_UBICACION" />
+          <ScalarProperty Name="D_UBICACION" ColumnName="D_UBICACION" />
+          <ScalarProperty Name="D_ZONA" ColumnName="D_ZONA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIODT">
+      <EntityTypeMapping TypeName="DATABASE_FFHModel.USUARIODT">
+        <MappingFragment StoreEntitySet="USUARIODT">
+          <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
+          <ScalarProperty Name="NOMBRE_USU_RED" ColumnName="NOMBRE_USU_RED" />
+          <ScalarProperty Name="RED" ColumnName="RED" />
+          <ScalarProperty Name="MAIL" ColumnName="MAIL" />
+          <ScalarProperty Name="N_CELULAR" ColumnName="N_CELULAR" />
+          <ScalarProperty Name="FOTO" ColumnName="FOTO" />
+          <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
+          <ScalarProperty Name="APELLIDO" ColumnName="APELLIDO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

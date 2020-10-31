@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a9510c33b9094bcf87a64a8591ce0c9d" Name="Diagram1">
+        <EntityTypeShape EntityType="DATABASE_FFHModel.PUBLICACIONDT" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATABASE_FFHModel.RAZADT" Width="1.5" PointX="0.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATABASE_FFHModel.UBICACIONDT" Width="1.5" PointX="0.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DATABASE_FFHModel.USUARIODT" Width="1.5" PointX="0.75" PointY="8.375" IsExpanded="true" />
+        <AssociationConnector Association="DATABASE_FFHModel.FK_PUBLICACIONDT_RAZADT" ManuallyRouted="false" />
+        <AssociationConnector Association="DATABASE_FFHModel.FK_PUBLICACIONDT_UBICACIONDT" ManuallyRouted="false" />
+        <AssociationConnector Association="DATABASE_FFHModel.FK_PUBLICACIONDT_USUARIODT" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

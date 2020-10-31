@@ -1,0 +1,66 @@
+﻿@*@model IEnumerable<FAR_FROM_HOME.EF.USUARIODT>*@
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+
+
+
+@*@{
+        ViewData["Title"] = "Home Page";
+    }*@
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta name=" viewport" content="width-device-width" />
+    <title>Far From Home</title>
+
+</head>
+
+<body>
+
+    <div class="container embed-responsive-1by1">
+        <div class="modal-dialog text-center">
+            <div class="col-sm-8 main-section">
+                <div class="modal-content">
+                    <div class="col-12 user-img">
+                        <img src="~/img/unnamed.png" />
+                    </div>
+                    <form class="col-12">
+                        <div class="form-group" id="user-group">
+
+                            <input type="text" class="form-control" placeholder=" Nombre de usuario" />
+                        </div>
+                        <div class="form-group" id="contraseña-group">
+                            <input type="password" class="form-control" placeholder="Contraseña" />
+                        </div>
+                        <button type="submit" class="btn btn-primary"> <i class="fas fa-sign-in-alt"></i> Ingresar</button>
+                    </form>
+                    <div class="col-12 forgot">
+                        @Html.ActionLink("Recordar Contraseña", "Grilla", "FFH")
+
+                    </div>
+
+                    <div class="col-12 forgot">
+
+                        @Html.ActionLink("INGRESAR SIN REGISTRARSE", "Grilla", "FFH")
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
