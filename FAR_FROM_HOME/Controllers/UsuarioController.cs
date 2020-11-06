@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FAR_FROM_HOME.EF;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,10 +9,21 @@ namespace FAR_FROM_HOME.Controllers
 {
     public class UsuarioController : Controller
     {
+
+        DATABASE_FFHEntities contexto;
+        private DATABASE_FFHEntities db = new DATABASE_FFHEntities();
+        // GET: Usuario
+        public UsuarioController()
+        {
+
+            contexto = new DATABASE_FFHEntities();
+        }
+
         // GET: Usuario
         public ActionResult Index()
         {
-            return View();
+            List<USUARIODT> usuarios = contexto.USUARIODT.ToList();
+            return View(usuarios);
         }
 
         // GET: Usuario/Details/5
