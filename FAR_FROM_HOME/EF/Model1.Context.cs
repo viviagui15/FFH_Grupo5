@@ -26,8 +26,6 @@ namespace FAR_FROM_HOME.EF
         }
     
         public virtual DbSet<PUBLICACIONDT> PUBLICACIONDT { get; set; }
-        public virtual DbSet<RAZADT> RAZADT { get; set; }
-        public virtual DbSet<UBICACIONDT> UBICACIONDT { get; set; }
         public virtual DbSet<USUARIODT> USUARIODT { get; set; }
     }
 }

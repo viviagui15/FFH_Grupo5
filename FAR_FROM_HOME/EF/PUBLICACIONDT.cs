@@ -15,9 +15,9 @@ namespace FAR_FROM_HOME.EF
     public partial class PUBLICACIONDT
     {
         public int ID_PUBLICACION { get; set; }
-        public int ID_USUARIO { get; set; }
-        public int ID_UBICACION { get; set; }
-        public int ID_RAZA { get; set; }
+        public Nullable<int> ID_USUARIO { get; set; }
+        public string UBICACION { get; set; }
+        public string RAZA { get; set; }
         public string ESTADO_SALUD { get; set; }
         public string TIPO_MASCOTA { get; set; }
         public string COLOR_MASCOTA { get; set; }
@@ -28,10 +28,9 @@ namespace FAR_FROM_HOME.EF
         public string TRANSITO { get; set; }
         public string EST_ENCPERD { get; set; }
         public Nullable<System.TimeSpan> F_PUBLICACION { get; set; }
+        public string IMAGEN { get; set; }
         public string DESCRIPCION { get; set; }
     
-        public virtual RAZADT RAZADT { get; set; }
-        public virtual UBICACIONDT UBICACIONDT { get; set; }
         public virtual USUARIODT USUARIODT { get; set; }
     }
 }

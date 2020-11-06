@@ -1,66 +1,127 @@
-﻿@*@model IEnumerable<FAR_FROM_HOME.EF.USUARIODT>*@
-
-@{
-    ViewBag.Title = "Index";
+﻿@{
+    //ViewData["Title"] = "Home Page";
 }
-
-
-
-
-
-@*@{
-        ViewData["Title"] = "Home Page";
-    }*@
-
-
 <!DOCTYPE html>
 
 <html>
 
 <head>
     <meta name=" viewport" content="width-device-width" />
-    <title>Far From Home</title>
+    <title>Far From Home </title>
 
 </head>
 
 <body>
+     
 
-    <div class="container embed-responsive-1by1">
-        <div class="modal-dialog text-center">
-            <div class="col-sm-8 main-section">
-                <div class="modal-content">
-                    <div class="col-12 user-img">
-                        <img src="~/img/unnamed.png" />
-                    </div>
-                    <form class="col-12">
-                        <div class="form-group" id="user-group">
+    <form class="col-4">
+        <div class="barra_buscar">
+            <input class="form-control" id="myInput" type="text" placeholder="Buscá tu mascota...">
+        </div>
+    </form>
 
-                            <input type="text" class="form-control" placeholder=" Nombre de usuario" />
-                        </div>
-                        <div class="form-group" id="contraseña-group">
-                            <input type="password" class="form-control" placeholder="Contraseña" />
-                        </div>
-                        <button type="submit" class="btn btn-primary"> <i class="fas fa-sign-in-alt"></i> Ingresar</button>
-                    </form>
-                    <div class="col-12 forgot">
-                        @Html.ActionLink("Recordar Contraseña", "Grilla", "FFH")
-
-                    </div>
-
-                    <div class="col-12 forgot">
-
-                        @Html.ActionLink("INGRESAR SIN REGISTRARSE", "Grilla", "FFH")
-
-
-                    </div>
+    <div class="col-12">
+        <div class="card-columns">
+            <div class="card text-center transparencia-general">
+                <img src="~/img/perdidos/120845810_10223101506595506_1722372855635079454_o.jpg" class="card-img-top relieve" alt="...">
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-sm btn-outline-primary relieve" data-dismiss="modal"><i class="fab fa-facebook"></i> Compartir</button>
+                    <button type="button" class="btn btn-sm btn-outline-primary relieve"><i class="fab fa-twitter-square"></i> Twittear</button>
                 </div>
-
             </div>
 
+            <div class="card transparencia-general">
+                <img src="~/img/perdidos/120754814_3127107354182351_6126515144654569189_n.jpg" class="card-img-top relieve" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Sigo buscando a mi gato fito. Se fue el 6 de enero. Zona gonnet quizás alguien lo encontro y lo adopto sin saber que tiene familia y que lo estamos esperando.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-outline-primary relieve" data-dismiss="modal"><i class="fab fa-facebook"></i> Compartir</button>
+                    <button type="button" class="btn btn-sm btn-outline-primary relieve"><i class="fab fa-twitter-square"></i> Twittear</button>
+                </div>
+            </div>
+
+            <div class="card transparencia-general">
+                <img src="~/img/perdidos/120761018_1588273124697100_2382311486905820395_n.jpg" class="card-img-top relieve" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Hola buen día. Mí mamá encontró a este bebé en la rotonda de Ensenada 32 y 120. Es machito, esta perdido y casi lo choca un auto, parece estar súper cuidado y está acostumbrado a andar en auto porque se subió solito automáticamente. BUSCO A SUS DUEÑOS!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-outline-primary relieve" data-dismiss="modal"><i class="fab fa-facebook"></i> Compartir</button>
+                    <button type="button" class="btn btn-sm btn-outline-primary relieve"><i class="fab fa-twitter-square"></i> Twittear</button>
+                </div>
+            </div>
+            <div class="card transparencia-general">
+                <img src="~/img/perdidos/120818306_819979472097067_706890470037104040_o.jpg" class="card-img-top relieve" alt="...">
+                <div class="card-body">
+                    <p class="card-text">
+                        Hola! por favor necesito de su ayuda.
+                        Anoche rescatamos a este michi de una obra.
+                        Es salvaje, muy desconfiado, yo supongo que debe ser por el estres que tiene. No sabe hacer en las piedritas, habria que enseñarle a que se acostumbre.
+                        POR FAVOR, QUE EL DUEÑO APAREZCA O UNA ADOPCION QUE LE TENGA LA PACIENCIA QUE HAY QUE TENERLE. Sino tengo que castrarlo y devolverlo a la obra y me parte el alma 😭
+                        Deberia ser un lugar todo cerrado y sin perros, es muy miedoso el michi.
+                        Lo/a entrego castrado/a, aun no pudimos ver si es hembrita o machito.
+                        Por favor comunicarse por llamada o wsp al 2214940590, NO POR FACEBOOK.
+                        Muchas gracias!!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-outline-primary relieve" data-dismiss="modal"><i class="fab fa-facebook"></i> Compartir</button>
+                    <button type="button" class="btn btn-sm btn-outline-primary relieve"><i class="fab fa-twitter-square"></i> Twittear</button>
+                </div>
+            </div>
+            <div class="card transparencia-general">
+                <img src="~/img/perdidos/120851175_3569889456394795_3382186884610206462_n.jpg" class="card-img-top relieve" alt="...">
+                <div class="card-body">
+                    <p class="card-text">Aparecio en Zona sel Hospital San Martin🏥. Cachorra, muy asustada😟. Comunicarse x MD, con fotos para corroborar que el picho vuelva con su familia</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-outline-primary relieve" data-dismiss="modal"><i class="fab fa-facebook"></i> Compartir</button>
+                    <button type="button" class="btn btn-sm btn-outline-primary relieve"><i class="fab fa-twitter-square"></i> Twittear</button>
+                </div>
+            </div>
+            <div class="card transparencia-general">
+                <img src="~/img/perdidos/120855340_3510745515630497_3759752629389401266_o.jpg" class="card-img-top relieve" alt="...">
+                <div class="card-body">
+                    <p class="card-text">GENTE POR FAVOR!! HOY TODOS A ROJAS 1365 PATERNAL A HACERNOS ESCUCHAR! HOY ES LOGAN ! MAÑANA PODRIA SER SU PERRO!! NO DEJEMOS QUE PASE!!!! AYER HABIA 7 PERSONAS NADA MAS !! NO PUEDE PASAR ESO !!! HOY SI O SI TIENE QUE VENIR MUCHA GENTE Y HACERNOS ESCUCHAR !! LEO MAÑANA YA NO PUEDE VOLVER ! HASTA DENTRO DE 10 DIAS !</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-outline-primary relieve" data-dismiss="modal"><i class="fab fa-facebook"></i> Compartir</button>
+                    <button type="button" class="btn btn-sm btn-outline-primary relieve"><i class="fab fa-twitter-square"></i> Twittear</button>
+                </div>
+            </div>
+            <div class="card transparencia-general">
+                <img src="~/img/perdidos/120882549_3360315400742078_1055620061109884383_o.jpg" class="card-img-top relieve" alt="...">
+                <div class="card-body">
+                    <p class="card-text">
+                        Chicas me ayudan por favor hace un rato aparecio abajo de la mesada de mi casa no se como llego es macho y tiene la patita o el brasito dislocado no cuento con medios para pagar un veterinario soy de zona la loma 30 entre 35 y 36 . si alguien perdio este gatito es muy dosil asi que dueño u dueña tiene lo tendre hasta que aparesca su familia pero necesito alguien que lo venga a ver su brasito
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-outline-primary relieve" data-dismiss="modal"><i class="fab fa-facebook"></i> Compartir</button>
+                    <button type="button" class="btn btn-sm btn-outline-primary relieve"><i class="fab fa-twitter-square"></i> Twittear</button>
+                </div>
+            </div>
+            <div class="card transparencia-general">
+                <img src="~/img/perdidos/121004017_10223509371266224_6719432762299546_o.jpg" class="card-img-top relieve" alt="...">
+                <div class="card-body">
+                    <p class="card-text">
+                        📣Ella es JAZMIN. 📣
+                        Una cachorrona de 2 años, castrada, super amorosa, se lleva bien con otros perros,tamaño mediano a grandecita. Busca UN HOGAR DEFINITIVO💕,con parque CERRADO ,sin cadenas y 🚫sin niños🚫.
+                        Me ayudan a conseguirselo? Realmente se lo merece.💕
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-outline-primary relieve" data-dismiss="modal"><i class="fab fa-facebook"></i> Compartir</button>
+                    <button type="button" class="btn btn-sm btn-outline-primary relieve"><i class="fab fa-twitter-square"></i> Twittear</button>
+                </div>
+            </div>
         </div>
+
+
     </div>
+
 
 </body>
 
 </html>
-

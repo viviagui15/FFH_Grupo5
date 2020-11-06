@@ -5,9 +5,9 @@
       <PropertyRef Name="ID_PUBLICACION" />
     </Key>
     <Property Name="ID_PUBLICACION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="ID_USUARIO" Type="Int32" Nullable="false" />
-    <Property Name="ID_UBICACION" Type="Int32" Nullable="false" />
-    <Property Name="ID_RAZA" Type="Int32" Nullable="false" />
+    <Property Name="ID_USUARIO" Type="Int32" />
+    <Property Name="UBICACION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="RAZA" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="ESTADO_SALUD" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="TIPO_MASCOTA" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="COLOR_MASCOTA" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
@@ -18,68 +18,23 @@
     <Property Name="TRANSITO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
     <Property Name="EST_ENCPERD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
     <Property Name="F_PUBLICACION" Type="Time" Precision="7" />
+    <Property Name="IMAGEN" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
     <Property Name="DESCRIPCION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="RAZADT" Relationship="Self.FK_PUBLICACIONDT_RAZADT" FromRole="PUBLICACIONDT" ToRole="RAZADT" />
-    <NavigationProperty Name="UBICACIONDT" Relationship="Self.FK_PUBLICACIONDT_UBICACIONDT" FromRole="PUBLICACIONDT" ToRole="UBICACIONDT" />
     <NavigationProperty Name="USUARIODT" Relationship="Self.FK_PUBLICACIONDT_USUARIODT" FromRole="PUBLICACIONDT" ToRole="USUARIODT" />
-  </EntityType>
-  <EntityType Name="RAZADT">
-    <Key>
-      <PropertyRef Name="ID_RAZA" />
-    </Key>
-    <Property Name="ID_RAZA" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="D_RAZA" Type="String" MaxLength="25" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="PUBLICACIONDT" Relationship="Self.FK_PUBLICACIONDT_RAZADT" FromRole="RAZADT" ToRole="PUBLICACIONDT" />
-  </EntityType>
-  <EntityType Name="UBICACIONDT">
-    <Key>
-      <PropertyRef Name="ID_UBICACION" />
-    </Key>
-    <Property Name="ID_UBICACION" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="D_UBICACION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="D_ZONA" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-    <NavigationProperty Name="PUBLICACIONDT" Relationship="Self.FK_PUBLICACIONDT_UBICACIONDT" FromRole="UBICACIONDT" ToRole="PUBLICACIONDT" />
   </EntityType>
   <EntityType Name="USUARIODT">
     <Key>
       <PropertyRef Name="ID_USUARIO" />
     </Key>
     <Property Name="ID_USUARIO" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="NOMBRE_USU_RED" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="RED" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
     <Property Name="MAIL" Type="String" MaxLength="250" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="N_CELULAR" Type="Int32" />
-    <Property Name="FOTO" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="NOMBRE" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="APELLIDO" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CONTRASENIA" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="PUBLICACIONDT" Relationship="Self.FK_PUBLICACIONDT_USUARIODT" FromRole="USUARIODT" ToRole="PUBLICACIONDT" />
   </EntityType>
-  <Association Name="FK_PUBLICACIONDT_RAZADT">
-    <End Role="RAZADT" Type="Self.RAZADT" Multiplicity="1" />
-    <End Role="PUBLICACIONDT" Type="Self.PUBLICACIONDT" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="RAZADT">
-        <PropertyRef Name="ID_RAZA" />
-      </Principal>
-      <Dependent Role="PUBLICACIONDT">
-        <PropertyRef Name="ID_RAZA" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_PUBLICACIONDT_UBICACIONDT">
-    <End Role="UBICACIONDT" Type="Self.UBICACIONDT" Multiplicity="1" />
-    <End Role="PUBLICACIONDT" Type="Self.PUBLICACIONDT" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="UBICACIONDT">
-        <PropertyRef Name="ID_UBICACION" />
-      </Principal>
-      <Dependent Role="PUBLICACIONDT">
-        <PropertyRef Name="ID_UBICACION" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK_PUBLICACIONDT_USUARIODT">
-    <End Role="USUARIODT" Type="Self.USUARIODT" Multiplicity="1" />
+    <End Role="USUARIODT" Type="Self.USUARIODT" Multiplicity="0..1" />
     <End Role="PUBLICACIONDT" Type="Self.PUBLICACIONDT" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="USUARIODT">
@@ -92,17 +47,7 @@
   </Association>
   <EntityContainer Name="DATABASE_FFHEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="PUBLICACIONDT" EntityType="Self.PUBLICACIONDT" />
-    <EntitySet Name="RAZADT" EntityType="Self.RAZADT" />
-    <EntitySet Name="UBICACIONDT" EntityType="Self.UBICACIONDT" />
     <EntitySet Name="USUARIODT" EntityType="Self.USUARIODT" />
-    <AssociationSet Name="FK_PUBLICACIONDT_RAZADT" Association="Self.FK_PUBLICACIONDT_RAZADT">
-      <End Role="RAZADT" EntitySet="RAZADT" />
-      <End Role="PUBLICACIONDT" EntitySet="PUBLICACIONDT" />
-    </AssociationSet>
-    <AssociationSet Name="FK_PUBLICACIONDT_UBICACIONDT" Association="Self.FK_PUBLICACIONDT_UBICACIONDT">
-      <End Role="UBICACIONDT" EntitySet="UBICACIONDT" />
-      <End Role="PUBLICACIONDT" EntitySet="PUBLICACIONDT" />
-    </AssociationSet>
     <AssociationSet Name="FK_PUBLICACIONDT_USUARIODT" Association="Self.FK_PUBLICACIONDT_USUARIODT">
       <End Role="USUARIODT" EntitySet="USUARIODT" />
       <End Role="PUBLICACIONDT" EntitySet="PUBLICACIONDT" />

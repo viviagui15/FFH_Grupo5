@@ -6,7 +6,6 @@
 <html>
 
 <head>
-
     <meta name=" viewport" content="width-device-width" />
     <title>Far From Home </title>
 
@@ -14,25 +13,39 @@
 
 <body>
 
+    <div class="d-flex">
+        <div class="dropdown mr-1">
+            <button type="button" class="btn btn-secondary dropdown-toggle" id="dropdownMenuOffset" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="10,20">
+                Offset
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuOffset">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+        </div>
+        <div class="btn-group">
+            <button type="button" class="btn btn-secondary">Reference</button>
+            <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" id="dropdownMenuReference" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-reference="parent">
+                <span class="sr-only">Toggle Dropdown</span>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <a class="dropdown-item" href="#">Something else here</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Separated link</a>
+            </div>
+        </div>
+    </div>
+
     <form class="col-4">
         <div class="barra_buscar">
             <input class="form-control" id="myInput" type="text" placeholder="Buscá tu mascota...">
         </div>
     </form>
-    <div class="container">
 
-        <script>
-            $(document).ready(function () {
-                $("#myInput").on("keyup", function () {
-                    var value = $(this).val().toLowerCase();
-                    $("#myTable tr").filter(function () {
-                        $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-                    });
-                });
-            });
-        </script>
-
-
+    <div class="col-12">
         <div class="card-columns">
             <div class="card text-center transparencia-general">
                 <img src="~/img/perdidos/120845810_10223101506595506_1722372855635079454_o.jpg" class="card-img-top relieve" alt="...">

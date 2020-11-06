@@ -21,13 +21,10 @@ namespace FAR_FROM_HOME.EF
         }
     
         public int ID_USUARIO { get; set; }
-        public string NOMBRE_USU_RED { get; set; }
-        public string RED { get; set; }
         public string MAIL { get; set; }
-        public Nullable<int> N_CELULAR { get; set; }
-        public string FOTO { get; set; }
         public string NOMBRE { get; set; }
         public string APELLIDO { get; set; }
+        public string CONTRASENIA { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PUBLICACIONDT> PUBLICACIONDT { get; set; }

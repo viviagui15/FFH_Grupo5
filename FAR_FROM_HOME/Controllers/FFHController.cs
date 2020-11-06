@@ -3,23 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using FAR_FROM_HOME.EF; 
+using FAR_FROM_HOME.EF;
+using System.Data;
+using System.Data.Entity;
+using System.Net;
+
+
+
 
 namespace FAR_FROM_HOME.Controllers
 {
     public class FFHController : Controller
-    {
-        DATABASE_FFHEntities contexto;
-        // GET: Usuario
-        public FFHController()
-        {
-            contexto = new DATABASE_FFHEntities();
-        }
+    {    
+        
+        
         // GET: FFH
         public ActionResult Index()
         {
-            List<USUARIODT> usuarios = contexto.USUARIODT.ToList();
-            return View(usuarios);
+            return View();
         }
 
         public ActionResult Grilla()
@@ -27,4 +28,10 @@ namespace FAR_FROM_HOME.Controllers
             return View();
         }
     }
-}
+
+
+
+    }
+
+
+
