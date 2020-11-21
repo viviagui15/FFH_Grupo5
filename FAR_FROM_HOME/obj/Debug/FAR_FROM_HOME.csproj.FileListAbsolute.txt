@@ -62,3 +62,4 @@ C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\obj\Debug\FAR_FROM_HOM
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\obj\Debug\FAR_FROM_HOME.pdb
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\Newtonsoft.Json.dll
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\Newtonsoft.Json.xml
+C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\obj\Debug\FAR_FROM_HOME.csprojAssemblyReference.cache
