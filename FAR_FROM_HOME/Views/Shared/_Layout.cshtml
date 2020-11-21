@@ -93,17 +93,7 @@
                                 </div>
                             </div>
 
-                            @*<form action="/action_page.php">
-                                <label for="cars">Choose a car:</label>
-                                <select name="cars" id="cars">
-                                    <option value="volvo">Volvo</option>
-                                    <option value="saab">Saab</option>
-                                    <option value="opel">Opel</option>
-                                    <option value="audi">Audi</option>
-                                </select>
-                                <br><br>
-                                <input type="submit" value="Submit">
-                            </form>*@
+                           
                             <!-- Body Detalles de la mascota -->
                             <div class="row setup-content" id="step-1">
                                 <div class="col-xs-12">
@@ -127,50 +117,76 @@
                                             <label class="radio-inline"><input type="radio" name="optradio">Macho</label>
                                         </div>
                                         <br />
+                                        @*<form action="/action_page.php">
+            <label for="cars">Choose a car:</label>
+            <select name="cars" id="cars">
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+        </form>*@
                                         <div class="dropdown">
                                             <!-- Salud -->
                                             <div>
-                                                <button class="btn btn-primary dropdown-toggle col-md-8" type="button" data-toggle="dropdown">
-                                                    Salud
-                                                    <span class="caret "></span>
-                                                </button>
-                                                <ul class="dropdown-menu">
-                                                    <li><a href="#">Buena</a></li>
-                                                    <li><a href="#">Enfermo</a></li>
-                                                    <li><a href="#">Deteriorada</a></li>
-                                                </ul>
+                                                <label for="salud">Salud</label><br />
+                                                <select class="btn btn-primary btn-light dropdown-toggle col-md-10" name="caret" id="caret">
+                                                    <option value="sin seleccion">Seleccionar Salud</option>
+                                                    <option value="Buena">Buena</option>
+                                                    <option value="Enfermo">Enfermo</option>
+                                                    <option value="Deteriorada">Deteriorada</option>
+                                                </select>
                                             </div>
                                         </div>
                                         <br />
                                         <!-- Tipo de mascota -->
                                         <div class="dropdown">
-                                            <button class="btn btn-primary dropdown-toggle col-md-8" type="button" data-toggle="dropdown">
-                                                Tipo de mascota
-                                                <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Perro</a></li>
-                                                <li><a href="#">Gato</a></li>
-                                                <li><a href="#">Tortuga</a></li>
-                                            </ul>
+                                            @*<button class="btn btn-primary dropdown-toggle col-md-8" type="button" data-toggle="dropdown">
+                Tipo de mascota
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Perro</a></li>
+                <li><a href="#">Gato</a></li>
+                <li><a href="#">Tortuga</a></li>
+            </ul>*@
+                                            <label for="Tipo de mascota">Tipo de mascota</label><br />
+                                            <select class="btn btn-primary btn-light dropdown-toggle col-md-10" name="caret" id="caret">
+                                                <option value="sin seleccion">Seleccionar Tipo de mascota</option>
+                                                <option value="Perro">Perro</option>
+                                                <option value="Gato">Gato</option>
+                                                <option value="Tortuga">Tortuga</option>
+                                            </select>
                                         </div>
                                         <br />
                                         <!-- Raza -->
                                         <div class="dropdown">
-                                            <button class="btn btn-primary dropdown-toggle col-md-8" type="button" data-toggle="dropdown">
-                                                Raza
-                                                <span class="caret"></span>
-                                            </button>
-                                            <ul class="dropdown-menu">
-                                                <li><a href="#">Breton</a></li>
-                                                <li><a href="#">Caniche</a></li>
-                                                <li><a href="#">Collie</a></li>
-                                            </ul>
+                                            @*<button class="btn btn-primary dropdown-toggle col-md-8" type="button" data-toggle="dropdown">
+                Raza
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="#">Breton</a></li>
+                <li><a href="#">Caniche</a></li>
+                <li><a href="#">Collie</a></li>
+            </ul>*@
+                                            <label for="Raza">Raza</label><br />
+                                            <select class="btn btn-primary btn-light dropdown-toggle col-md-10" name="caret" id="caret">
+                                                <option value="sin seleccion">Seleccionar Raza</option>
+                                                <option value="Breton">Breton</option>
+                                                <option value="Caniche">Caniche</option>
+                                                <option value="Collie">Collie</option>
+                                                <option value="Pequines">Pequines</option>
+                                                <option value="Ovejero">Ovejero</option>
+                                                <option value="NN">No se sabe</option>
+                                            </select>
                                         </div>
                                         <br />
                                         <!-- Colores -->
                                         <div class="dropdown">
-                                            <button class="btn btn-primary dropdown-toggle col-md-8" type="button" data-toggle="dropdown">
+                                            @*<button class="btn btn-primary dropdown-toggle col-md-8" type="button" data-toggle="dropdown">
                                                 Colores
                                                 <span class="caret"></span>
                                             </button>
@@ -184,12 +200,26 @@
                                                 <li><a href="#">Marrón</a></li>
                                                 <li><a href="#">Caramelo</a></li>
                                                 <li><a href="#">Manchado</a></li>
-                                            </ul>
+                                            </ul>*@
+                                            <label for="Colores">Colores</label><br />
+                                                <select class="btn btn-primary btn-light dropdown-toggle col-md-10" name="caret" id="caret">
+                                                    <option value="sin seleccion">Seleccionar Color</option>
+                                                    <option value="Tricolor">Tricolor</option>
+                                                    <option value="Rubio">Rubio</option>
+                                                    <option value="Colorado">Colorado</option>
+                                                    <option value="Matizado">Matizado</option>
+                                                    <option value="Blanco">Blanco</option>
+                                                    <option value="Negro">Colorado</option>
+                                                    <option value="Marrón">Matizado</option>
+                                                    <option value="Caramelo">Blanco</option>
+                                                    <option value="Manchado">Manchado</option>
+                                                </select>
                                         </div>
+                                        
                                         <br />
                                         <!-- Tamaño -->
                                         <div class="dropdown">
-                                            <button class="btn btn-primary dropdown-toggle col-md-8" type="button" data-toggle="dropdown">
+                                            @*<button class="btn btn-primary dropdown-toggle col-md-8" type="button" data-toggle="dropdown">
                                                 Tamaño
                                                 <span class="caret"></span>
                                             </button>
@@ -197,12 +227,19 @@
                                                 <li><a href="#">Chico</a></li>
                                                 <li><a href="#">Mediano</a></li>
                                                 <li><a href="#">Grande</a></li>
-                                            </ul>
+                                            </ul>*@
+                                            <label for="Tamaño">Tamaño</label><br />
+                                            <select class="btn btn-primary btn-light dropdown-toggle col-md-10" name="caret" id="caret">
+                                                <option value="sin seleccion">Seleccionar Tamaño</option>
+                                                <option value="Chico">Chico</option>
+                                                <option value="Mediano">Mediano</option>
+                                                <option value="Grande">Grande</option>
+                                            </select>
                                         </div>
                                         <br />
                                         <!-- Edad -->
                                         <div class="dropdown">
-                                            <button class="btn btn-primary dropdown-toggle col-md-8" type="button" data-toggle="dropdown">
+                                            @*<button class="btn btn-primary dropdown-toggle col-md-8" type="button" data-toggle="dropdown">
                                                 Edad
                                                 <span class="caret"></span>
                                             </button>
@@ -211,12 +248,21 @@
                                                 <li><a href="#">Cachorro</a></li>
                                                 <li><a href="#">Adulto</a></li>
                                                 <li><a href="#">Adulto Mayor</a></li>
-                                            </ul>
+                                            </ul>*@
+                                            <label for="Edad">Edad</label><br />
+                                            <select class="btn btn-primary btn-light dropdown-toggle col-md-10" name="caret" id="caret">
+                                                <option value="sin seleccion">Seleccionar Edad</option>
+                                                <option value="Bebe">Bebe</option>
+                                                <option value="Cachorro">Cachorro</option>
+                                                <option value="Adulto">Adulto</option>
+                                                <option value="Adulto Mayor">Adulto Mayor</option>
+
+                                            </select>
                                         </div>
                                         <br />
                                         <!-- Descripción -->
                                         <div class="form-group">
-                                            <label class="col-md-8" for="comment">Descripción (en caso que no se ajuste a las opciones anteriores)</label>
+                                            <label class="col-md-12" for="comment">Descripción (en caso que no se ajuste a las opciones anteriores)</label>
                                             <textarea class="form-control col-md-8" rows="5" id="comment"></textarea>
                                         </div>
                                         <br />  <br />
@@ -234,9 +280,9 @@
                                     </div>
                                 </div>
                                 <button class="btn btn-light btn-block nextBtn  pull-right col-md-20" type="button">Siguiente</button>
+                            </div>
 
                             </div>
-                        </div>
 
                         <!-- Body Lugar -->
                         <div class="row setup-content" id="step-2">
@@ -258,8 +304,8 @@
                                     </div>
                                     <br />
                                     <!-- Provincia -->
-                                    <div>
-                                        <button class="btn btn-primary dropdown-toggle col-md-8" type="button" data-toggle="dropdown">
+                                    <div class="dropdown">
+                                        @*<button class="btn btn-primary dropdown-toggle col-md-8" type="button" data-toggle="dropdown">
                                             Provincia
                                             <span class="caret"></span>
                                         </button>
@@ -268,12 +314,21 @@
                                             <li><a href="#">Santa Fe</a></li>
                                             <li><a href="#">Chaco</a></li>
                                             <li><a href="#">Jujuy Mayor</a></li>
-                                        </ul>
+                                        </ul>*@
+                                        <label for="Provincia">Provincia</label><br />
+                                        <select class="btn btn-primary btn-light dropdown-toggle col-md-10" name="caret" id="caret">
+                                            <option value="sin seleccion">Seleccionar Provincia</option>
+                                            <option value="Buenos Aires">Buenos Aires</option>
+                                            <option value="Santa Fe">Santa Fe</option>
+                                            <option value="Chaco">Chaco</option>
+                                            <option value="Jujuy">Jujuy</option>
+
+                                        </select>
                                     </div>
                                     <br />
                                     <!-- Localidad -->
-                                    <div>
-                                        <button class="btn btn-primary dropdown-toggle col-md-8" type="button" data-toggle="dropdown">
+                                    <div class="dropdown">
+                                        @*<button class="btn btn-primary dropdown-toggle col-md-8" type="button" data-toggle="dropdown">
                                             Localidad
                                             <span class="caret"></span>
                                         </button>
@@ -282,7 +337,16 @@
                                             <li><a href="#">2</a></li>
                                             <li><a href="#">3</a></li>
                                             <li><a href="#">4</a></li>
-                                        </ul>
+                                        </ul>*@
+                                        <label for="Localidad">Localidad</label><br />
+                                        <select class="btn btn-primary btn-light dropdown-toggle col-md-10" name="caret" id="caret">
+                                            <option value="sin seleccion">Seleccionar Localidad</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+
+                                        </select>
                                     </div>
                                     <br />
                                     <!-- Zona -->
@@ -317,8 +381,8 @@
                                         <input type="text" class="form-control" id="usr">
                                         <br />
                                         <!-- Red social -->
-                                        <div>
-                                            <button class="btn btn-primary dropdown-toggle col-md-8" type="button" data-toggle="dropdown">
+                                        <div class="dropdown">
+                                            @*<button class="btn btn-primary dropdown-toggle col-md-8" type="button" data-toggle="dropdown">
                                                 Red Social
                                                 <span class="caret"></span>
                                             </button>
@@ -327,7 +391,16 @@
                                                 <li><a href="#">Instagram</a></li>
                                                 <li><a href="#">Twitter</a></li>
                                                 <li><a href="#">TickTok</a></li>
-                                            </ul>
+                                            </ul>*@
+                                            <label for="Localidad">Localidad</label><br />
+                                            <select class="btn btn-primary btn-light dropdown-toggle col-md-10" name="caret" id="caret">
+                                                <option value="sin seleccion">Seleccionar Red Social</option>
+                                                <option value="Facebook">Facebook</option>
+                                                <option value="Instagram">Instagram</option>
+                                                <option value="Twitter">Twitter</option>
+                                                <option value="TickTok">TickTok</option>
+
+                                            </select>
                                         </div>
                                         <br />
                                     </div>
@@ -339,6 +412,7 @@
                         </div>
                     </div>
                 </div>
+                        </div>
                 <div class="modal-footer">
 
 
