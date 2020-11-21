@@ -88,7 +88,7 @@ namespace FAR_FROM_HOME.Controllers
             {
                 db.USUARIODT.Add(USUARIO);
                 db.SaveChanges();
-                return RedirectToAction("UsuarioLogueado");
+                return Redirect("/Publicacion/Index");
             }
 
             return View(USUARIO);
