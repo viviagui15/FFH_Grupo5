@@ -27,10 +27,14 @@ namespace FAR_FROM_HOME.EF
         public string SEXO { get; set; }
         public string TRANSITO { get; set; }
         public string EST_ENCPERD { get; set; }
-        public Nullable<System.TimeSpan> F_PUBLICACION { get; set; }
-        public string IMAGEN { get; set; }
+        public Nullable<System.DateTime> F_PUBLICACION { get; set; }
+        public byte[] IMAGEN { get; set; }
         public string DESCRIPCION { get; set; }
     
         public virtual USUARIODT USUARIODT { get; set; }
+
     }
+
+
+
 }

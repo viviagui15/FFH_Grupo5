@@ -10,6 +10,7 @@
 namespace FAR_FROM_HOME.EF
 {
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
@@ -28,4 +29,6 @@ namespace FAR_FROM_HOME.EF
         public virtual DbSet<PUBLICACIONDT> PUBLICACIONDT { get; set; }
         public virtual DbSet<USUARIODT> USUARIODT { get; set; }
     }
+
+
 }

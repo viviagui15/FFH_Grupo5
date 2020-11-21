@@ -1,0 +1,72 @@
+﻿@model IEnumerable<FAR_FROM_HOME.EF.PUBLICACIONDT>
+
+@{
+    //ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <script>
+            $(document).ready(function () {
+                $('#phyton').click(function () {
+                    $("#contenidotable").load("Index.cshtml");
+                });
+
+            });
+    </script>
+</head>
+<body>
+
+
+
+    <div class="container-fluid justify-content-center w-100" id="phyton">
+        <div class="row">
+
+
+
+            <div class="col-12 offset-md-2 col-md-10">
+
+                <div class="col-12">
+                    @*style="background:#000000" >*@
+                    <div class="card-columns" id="contenidotable">
+                        @using (Html.BeginForm("Index", "Publicacion", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+
+                            foreach (var item in Model)
+                            {
+
+                                <div class="card text-center">
+                                    <img src="@Url.Action("getImage","Publicacion",new { id=item.ID_PUBLICACION})" class="card-img-top relieve" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text">@item.DESCRIPCION</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-sm btn-outline-primary relieve" data-dismiss="modal"><i class="fab fa-facebook"></i> Compartir</button>
+                                        <button type="button" class="btn btn-sm btn-outline-primary relieve"><i class="fab fa-twitter-square"></i> Twittear</button><br />
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+</html>
+

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace FAR_FROM_HOME.Controllers
 {
@@ -12,19 +13,58 @@ namespace FAR_FROM_HOME.Controllers
 
         DATABASE_FFHEntities contexto;
         private DATABASE_FFHEntities db = new DATABASE_FFHEntities();
+    
         // GET: Usuario
         public UsuarioController()
         {
-
             contexto = new DATABASE_FFHEntities();
         }
 
-        // GET: Usuario
-        public ActionResult Index()
+        //GET: Usuario
+        public ActionResult Logueo(string message = "")
         {
-            List<USUARIODT> usuarios = contexto.USUARIODT.ToList();
-            return View(usuarios);
+           
+
+
+            ViewBag.Message = message;
+            return Redirect("/Publicacion/Index"); 
         }
+
+
+        [HttpPost]
+        public ActionResult Login(string email, string password)
+        {
+
+            if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(password))
+            {
+
+                var user = db.USUARIODT.FirstOrDefault(e => e.MAIL == email && e.CONTRASENIA == password);
+                if (user != null)
+                {
+                    //se encontro usuario
+                    FormsAuthentication.SetAuthCookie(user.MAIL, true);
+                    return RedirectToAction("Logueo", "Usuario"); //antes estaba Profile
+
+                }
+                else
+                {
+                    return RedirectToAction("Logueo", new { message = "No encontramos tus datos" });
+                }
+            }
+            else
+            {
+                return RedirectToAction("Logueo", new { message = "Llena los campos" });
+
+            }
+        }
+        [Authorize]
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Logueo", "Usuario");
+
+        }
+
 
         // GET: Usuario/Details/5
         public ActionResult Details(int id)
@@ -39,20 +79,34 @@ namespace FAR_FROM_HOME.Controllers
         }
 
         // POST: Usuario/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
 
-                return RedirectToAction("Index");
-            }
-            catch
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Create([Bind(Include = "MAIL,NOMBRE,APELLIDO,CONTRASENIA")] USUARIODT USUARIO)
+        {
+            if (ModelState.IsValid)
             {
-                return View();
+                db.USUARIODT.Add(USUARIO);
+                db.SaveChanges();
+                return RedirectToAction("UsuarioLogueado");
             }
+
+            return View(USUARIO);
         }
+
+
+        public ActionResult ErrorLogueo()
+        {
+            return View();
+        }
+
+    
+
+        public ActionResult UsuarioLogueado()
+        {
+            return View();
+        }
+
 
         // GET: Usuario/Edit/5
         public ActionResult Edit(int id)
@@ -75,6 +129,7 @@ namespace FAR_FROM_HOME.Controllers
                 return View();
             }
         }
+
 
         // GET: Usuario/Delete/5
         public ActionResult Delete(int id)

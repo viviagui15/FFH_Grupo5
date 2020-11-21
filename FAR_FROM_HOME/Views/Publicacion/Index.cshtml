@@ -1,0 +1,290 @@
+﻿@model IEnumerable<FAR_FROM_HOME.EF.PUBLICACIONDT>
+@{
+    List<SelectListItem> items = (List<SelectListItem>)ViewBag.items; 
+
+
+        }
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+</head>
+<body>
+
+
+
+    <div class="container-fluid justify-content-center w-100" id="phyton">
+        <div class="row">
+            @using (Html.BeginForm("Index", "Publicacion", FormMethod.Get))
+            {
+            <div class="container-fluid justify-content-center w-100">
+                <div class="row">
+
+                    <div class="col-12 col-md-2 sidebar contderecha">
+
+
+                        <div class="row nube">
+                            <div class="card" style="width: 18rem;">
+                                <div class="cardmenu">
+                                    <h7 class="font-weight-normal">Estado</h7>
+                                    <div class="" style="font-size:14px; ">
+                                        <form action="/Publicacion/Index">
+                                            <div class="form-check font-weight-light">
+                                                @using (Html.BeginForm("Index", "Publicacion", FormMethod.Get))
+                                                {
+                                                    <div class="custom-control custom-radio">
+                                                        @Html.RadioButton("estadoPer", "perdido")
+                                                        <label class="form-check-label">Perdido</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio">
+                                                        @*<input type="radio" id="estadoEnc" name="estadoPer" value="estadoEnc" class="custom-control-input">*@
+                                                        @Html.RadioButton("estadoPer", "encontrado")
+                                                        <label class="form-check-label">Encontrado</label>
+                                                    </div>
+                                                }
+                                            </div>
+                                            <div class="form-check font-weight-light">
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row nube">
+                            <div class="card" style="width: 18rem;">
+                                <div class="cardmenu">
+                                    <h7 class="font-weight-normal">Tipo Mascota</h7>
+                                    <div class="" style="font-size:14px; ">
+                                        <form action="/Publicacion/Index">
+                                            <div class="form-check font-weight-light">
+                                                @using (Html.BeginForm("Index", "Publicacion", FormMethod.Get))
+                                                {
+                                                    <div class="custom-control custom-radio">
+                                                        @Html.RadioButton("tipo", "perro")
+                                                        <label class="form-check-label">Perro</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio">
+                                                        @*<input type="radio" id="estadoEnc" name="estadoPer" value="estadoEnc" class="custom-control-input">*@
+                                                        @Html.RadioButton("tipo", "gato")
+                                                        <label class="form-check-label">Gato</label>
+                                                    </div>
+                                                    <div class="custom-control custom-radio">
+                                                        @*<input type="radio" id="estadoEnc" name="estadoPer" value="estadoEnc" class="custom-control-input">*@
+                                                        @Html.RadioButton("tipo", "otro")
+                                                        <label class="form-check-label">Otro</label>
+                                                    </div>
+                                                }
+                                                
+                                            </div>
+                                            <div class="form-check font-weight-light">
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row nube">
+                            <div class="card" style="width: 18rem;">
+                                <div class="cardmenu">
+                                    <h7 class="font-weight-normal">Ubicación</h7>
+                                    <div class="" style="font-size:14px; ">
+                                        <form action="/Publicacion/Index">
+                                            <div class="form-check font-weight-light">
+                                                @using (Html.BeginForm("Index", "Publicacion", FormMethod.Get))
+                                                {
+                                                    @Html.DropDownList("datos", items, "Ubicacion", new { @class = "dropdown-toggle" })
+                                                }
+                                            </div>
+                                            <div class="form-check font-weight-light">
+
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        @*<div class="row nube">
+            <div class="card" style="width: 18rem;">
+                <div class="cardmenu">
+                    <h7 class="font-weight-normal">Tipo</h7>
+                    <div class="" style="font-size:14px; ">
+
+
+                        <div class="form-check font-weight-light">
+                            <input class="form-check-input" type="checkbox" value="" id="TipoCheck1">
+                            <label class="form-check-label" for="TipoCheck1">
+                                Perro
+                            </label>
+                        </div>
+                        <div class="form-check font-weight-light">
+                            <input class="form-check-input" type="checkbox" value="" id="TipoCheck2">
+                            <label class="form-check-label" for="TipoCheck2">
+                                Gato
+                            </label>
+                        </div>
+                        <div class="form-check font-weight-light">
+                            <input class="form-check-input" type="checkbox" value="" id="TipoCheck3">
+                            <label class="form-check-label" for="TipoCheck3">
+                                Otro
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row nube">
+            <div class="card" style="width: 18rem;">
+                <div class="cardmenu">
+                    <h7 class="font-weight-normal">Color</h7>
+                    <div class="" style="font-size:14px; ">
+
+
+                        <div class="form-check font-weight-light">
+                            <input class="form-check-input" type="checkbox" value="" id="ColorCheck1">
+                            <label class="form-check-label" for="ColorCheck1">
+                                Marron
+                            </label>
+                        </div>
+                        <div class="form-check font-weight-light">
+                            <input class="form-check-input" type="checkbox" value="" id="ColorCheck2">
+                            <label class="form-check-label" for="ColorCheck2">
+                                Negro
+                            </label>
+                        </div>
+                        <div class="form-check font-weight-light">
+                            <input class="form-check-input" type="checkbox" value="" id="ColorCheck3">
+                            <label class="form-check-label" for="ColorCheck3">
+                                Blanco
+                            </label>
+                        </div>
+                        <div class="form-check font-weight-light">
+                            <input class="form-check-input" type="checkbox" value="" id="ColorCheck4">
+                            <label class="form-check-label" for="ColorCheck4">
+                                Otro
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row nube">
+            <div class="card" style="width: 18rem;">
+                <div class="cardmenu">
+                    <h7 class="font-weight-normal">Tamaño</h7>
+                    <div class="" style="font-size:14px; ">
+
+
+                        <div class="form-check font-weight-light">
+                            <input class="form-check-input" type="checkbox" value="" id="TamañoCheck1">
+                            <label class="form-check-label" for="TamañoCheck1">
+                                Pequeño
+                            </label>
+                        </div>
+                        <div class="form-check font-weight-light">
+                            <input class="form-check-input" type="checkbox" value="" id="TamañoCheck2">
+                            <label class="form-check-label" for="TamañoCheck2">
+                                Mediano
+                            </label>
+                        </div>
+                        <div class="form-check font-weight-light">
+                            <input class="form-check-input" type="checkbox" value="" id="TamañoCheck3">
+                            <label class="form-check-label" for="TamañoCheck3">
+                                Grande
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>*@
+                        <div class="row nube">
+                            <div class="card" style="width: 18rem;">
+                                <div class="cardmenu">
+
+                                    <div class="" style="font-size:14px; ">
+
+                                        <input class="nav-link float-lg-right btn btn-sm align-content-center" style="font-size: 16px; background: #21C87A; border-color:#21C87A;" id="myInput" type="submit" value="Reiniciar">
+                                        <input class="nav-link float-lg-right btn btn-sm align-content-center" style="font-size: 16px; background: #21C87A; border-color:#21C87A;" id="myInput" type="submit" value="Buscar">
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+  
+            }
+
+
+            <div class="col-12 offset-md-2 col-md-10">
+
+                <div class="col-12">
+                    @*style="background:#000000" >*@
+
+
+
+
+
+                    <div class="card-columns" id="contenidotable">
+
+
+
+                        @using (Html.BeginForm("Index", "Publicacion", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                        {
+
+                            foreach (var item in Model)
+                            {
+
+                                <div class="card text-center">
+                                    <img src="@Url.Action("getImage","Publicacion",new { id=item.ID_PUBLICACION})" class="card-img-top relieve" alt="..." />
+                                    <div class="card-body">
+                                        <p class="card-text">@item.DESCRIPCION</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="submit" class="btn btn-sm btn-outline-primary relieve" data-dismiss="modal"><i class="fab fa-facebook"></i> Compartir</button>
+                                        <button type="button" class="btn btn-sm btn-outline-primary relieve"><i class="fab fa-twitter-square"></i> Twittear</button><br />
+                                    </div>
+                                </div>
+                            }
+                        }
+                    </div>
+
+                    @using (Html.BeginForm("Index", "Publicacion", FormMethod.Get))
+                    {
+                        @Html.TextBox("searching")<input type="submit" value="Search" />}
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+</body>
+</html>

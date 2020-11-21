@@ -56,8 +56,10 @@ C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\es\System.Web.Webp
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\es\System.Web.Webpages.Razor.resources.dll
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\es\System.Web.Helpers.resources.dll
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\es\System.Web.Mvc.resources.dll
-C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\obj\Debug\FAR_FROM_HOME.csprojAssemblyReference.cache
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\obj\Debug\FAR_FROM_HOME.csproj.CoreCompileInputs.cache
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\obj\Debug\FAR_FROM_HOME.csproj.CopyComplete
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\obj\Debug\FAR_FROM_HOME.dll
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\obj\Debug\FAR_FROM_HOME.pdb
+C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\obj\Debug\FAR_FROM_HOME.csprojAssemblyReference.cache
+C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\Newtonsoft.Json.dll
+C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\Newtonsoft.Json.xml

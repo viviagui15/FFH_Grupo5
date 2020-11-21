@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DATABASE_FFHModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DATABASE_FFHModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="PUBLICACIONDT">
           <Key>
             <PropertyRef Name="ID_PUBLICACION" />
@@ -22,9 +22,9 @@
           <Property Name="SEXO" Type="char" MaxLength="1" />
           <Property Name="TRANSITO" Type="char" MaxLength="1" />
           <Property Name="EST_ENCPERD" Type="char" MaxLength="1" />
-          <Property Name="F_PUBLICACION" Type="time" Precision="7" />
-          <Property Name="IMAGEN" Type="nvarchar" MaxLength="2000" />
-          <Property Name="DESCRIPCION" Type="nvarchar" MaxLength="200" />
+          <Property Name="F_PUBLICACION" Type="datetime" />
+          <Property Name="IMAGEN" Type="varbinary(max)" />
+          <Property Name="DESCRIPCION" Type="nvarchar(max)" />
         </EntityType>
         <EntityType Name="USUARIODT">
           <Key>
@@ -56,8 +56,7 @@
             <End Role="PUBLICACIONDT" EntitySet="PUBLICACIONDT" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DATABASE_FFHModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -78,9 +77,9 @@
           <Property Name="SEXO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
           <Property Name="TRANSITO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
           <Property Name="EST_ENCPERD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="F_PUBLICACION" Type="Time" Precision="7" />
-          <Property Name="IMAGEN" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
-          <Property Name="DESCRIPCION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="F_PUBLICACION" Type="DateTime" Precision="3" />
+          <Property Name="IMAGEN" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="DESCRIPCION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="USUARIODT" Relationship="Self.FK_PUBLICACIONDT_USUARIODT" FromRole="PUBLICACIONDT" ToRole="USUARIODT" />
         </EntityType>
         <EntityType Name="USUARIODT">

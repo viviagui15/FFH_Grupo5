@@ -17,9 +17,9 @@
     <Property Name="SEXO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
     <Property Name="TRANSITO" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
     <Property Name="EST_ENCPERD" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-    <Property Name="F_PUBLICACION" Type="Time" Precision="7" />
-    <Property Name="IMAGEN" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
-    <Property Name="DESCRIPCION" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="F_PUBLICACION" Type="DateTime" Precision="3" />
+    <Property Name="IMAGEN" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="USUARIODT" Relationship="Self.FK_PUBLICACIONDT_USUARIODT" FromRole="PUBLICACIONDT" ToRole="USUARIODT" />
   </EntityType>
   <EntityType Name="USUARIODT">
