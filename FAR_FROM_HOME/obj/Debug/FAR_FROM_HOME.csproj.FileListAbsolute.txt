@@ -35,6 +35,7 @@ C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\EntityFramework.dl
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\EntityFramework.SqlServer.dll
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\Newtonsoft.Json.dll
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\System.Web.Helpers.dll
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\System.Web.Mvc.dll
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\System.Web.Razor.dll
@@ -44,6 +45,7 @@ C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\System.Web.Webpage
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\EntityFramework.xml
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\EntityFramework.SqlServer.xml
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\Newtonsoft.Json.xml
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\System.Web.Razor.xml
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\System.Web.Webpages.xml
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\System.Web.Webpages.Deployment.xml
@@ -56,9 +58,8 @@ C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\es\System.Web.Webp
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\es\System.Web.Webpages.Razor.resources.dll
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\es\System.Web.Helpers.resources.dll
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\es\System.Web.Mvc.resources.dll
+C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\obj\Debug\FAR_FROM_HOME.csprojAssemblyReference.cache
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\obj\Debug\FAR_FROM_HOME.csproj.CoreCompileInputs.cache
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\obj\Debug\FAR_FROM_HOME.csproj.CopyComplete
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\obj\Debug\FAR_FROM_HOME.dll
 C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\obj\Debug\FAR_FROM_HOME.pdb
-C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\Newtonsoft.Json.dll
-C:\Users\Viviana\source\repos\FAR_FROM_HOME\FAR_FROM_HOME\bin\Newtonsoft.Json.xml
